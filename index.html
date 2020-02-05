@@ -18,14 +18,28 @@
     </nav>
 
   <div class="container">
+
+    <div class="row">
+      <form>
+        <p>
+          <label for="title">City Name</label>
+          <input type="text" name="city" id="city">
+        </p>
+        <p>
+          <button id="searchCity">Search City</button>
+        </p>
+      </form>
+    </div>
    
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h4 id="cityName" class=""></h4> <br>
+        <h4 id="cityName" class=""></h4>
+        <div id="currentIcon"></div>
+        <br>
         <p id="currentTemp" class=""></p>
         <p id="humidity" class=""></p>
         <p id="windSpeed" class=""></p>
-        <p class=""></p>
+        <p id="uvIndex" class=""></p>
       </div>
     </div>
     <h4>5 Day forecast:</h4>
