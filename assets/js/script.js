@@ -3,16 +3,16 @@ let currentDay = moment().format("MM/DD/YYYY")
 // console.log(currentDayUnixSeconds)
 
 
-document.getElementById('searchCity').addEventListener('click', event => {
+// document.getElementById('searchCity').addEventListener('click', event => {
 
-  let cityElem = document.createElement('div')
-  cityElem.className = 'button'
-  cityElem.innerHTML = `
-  <button type="button" class="btn  btn-lg btn-block btn-outline-dark text-left">${document.getElementById('city').value}</button>
-  `
-  document.getElementById('history').append(cityElem)
+//   let cityElem = document.createElement('div')
+//   cityElem.className = 'button'
+//   cityElem.innerHTML = `
+//   <button type="button" class="btn  btn-lg btn-block btn-outline-dark text-left">${document.getElementById('city').value}</button>
+//   `
+//   document.getElementById('history').append(cityElem)
 
-})
+// })
 
 
 document.getElementById('searchCity').addEventListener('click', event => {
@@ -36,7 +36,15 @@ fetch(`http://api.openweathermap.org/data/2.5/weather?q=${document.getElementByI
     fetch(`http://api.openweathermap.org/data/2.5/uvi?appid=bad2b3e36cb846608fb20772133c3d58&lat=${lat}&lon=${lon}`)
       .then(r => r.json())
       .then(({value}) => {
-        document.getElementById('uvIndex').textContent = ('UV Index:  ' + value)
+        let condition
+        if ( value <= 2){
+          condition = 'badge-success'
+        }else if ( value >=3 && value <= 7){
+          condition = 'badge-warning'
+        }else {
+          condition = 'badge-danger'
+        }
+        document.getElementById('uvIndex').innerHTML = (`<p>UV Index: <span class="badge ${condition}">${value}</span></p>`)
       })
   })
   fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${document.getElementById('city').value}&units=imperial&APPID=bad2b3e36cb846608fb20772133c3d58`)
