@@ -18,100 +18,101 @@
     </nav>
 
   <div class="container">
-
     <div class="row">
-      <form>
-        <p>
-          <label for="title">City Name</label>
-          <input type="text" name="city" id="city">
-        </p>
-        <p>
-          <button id="searchCity">Search City</button>
-        </p>
-      </form>
-    </div>
-   
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h4 id="cityName" class=""></h4>
-        <div id="currentIcon"></div>
-        <br>
-        <p id="currentTemp" class=""></p>
-        <p id="humidity" class=""></p>
-        <p id="windSpeed" class=""></p>
-        <p id="uvIndex" class=""></p>
-      </div>
-    </div>
-    <h4>5 Day forecast:</h4>
-    <div class="row">
-      
-      <div class="col-sm-2 p-1">
-        <div class="card">
-          <div class="card-body">
-            <h4 id="dayOneDate" class="card-title"></h4>
-            <div id="dayOneIcon"></div>
-            <p id="dayOneTemp"></p>
-            <p id="dayOneHumidity"></p>
+      <div class="col-sm-4">
+        <div class="row">
+          <h5>Search for a city</h5>
+        </div>
+        <div class="row">
+          <form class="form-inline">
+            <p>
+              <input type="text" name="city" id="city" class="form-control">
+            </p>
+            <p>
+              <button id="searchCity" type="button" class="btn btn-primary">Search</button>
+            </p>
+          </form>
+          <div class="history">
+          <!-- <button type="button" class="btn  btn-lg btn-block btn-outline-dark text-left">Block level button</button> -->
           </div>
+
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h4 id="cityName" class=""></h4>
+            <div id="currentIcon"></div>
+            <br>
+            <p id="currentTemp" class=""></p>
+            <p id="humidity" class=""></p>
+            <p id="windSpeed" class=""></p>
+            <p id="uvIndex" class=""></p>
+          </div>
+        </div>
+        <h4>5 Day forecast:</h4>
+        <div class="row">
+          
+          <div class="col-sm-2 p-1">
+            <div class="card">
+              <div class="card-body">
+                <h4 id="dayOneDate" class="card-title"></h4>
+                <div id="dayOneIcon"></div>
+                <p id="dayOneTemp"></p>
+                <p id="dayOneHumidity"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-2 p-1">
+            <div class="card">
+              <div class="card-body">
+                <h4 id="dayTwoDate" class="card-title"></h4>
+                <div id="dayTwoIcon"></div>
+                <p id="dayTwoTemp"></p>
+                <p id="dayTwoHumidity"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-2 p-1">
+            <div class="card">
+              <div class="card-body">
+                <h4 id="dayThreeDate" class="card-title"></h4>
+                <div id="dayThreeIcon"></div>
+                <p id="dayThreeTemp"></p>
+                <p id="dayThreeHumidity"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-2 p-1">
+            <div class="card">
+              <div class="card-body">
+                <h4 id="dayFourDate" class="card-title"></h4>
+                <div id="dayFourIcon"></div>
+                <p id="dayFourTemp"></p>
+                <p id="dayFourHumidity"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-2 p-1">
+            <div class="card">
+              <div class="card-body">
+                <h4 id="dayFiveDate" class="card-title"></h4>
+                <div id="dayFiveIcon"></div>
+                <p id="dayFiveTemp"></p>
+                <p id="dayFiveHumidity"></p>
+              </div>
+            </div>
+          </div>
+
+          
         </div>
       </div>
 
-      <div class="col-sm-2 p-1">
-        <div class="card">
-          <div class="card-body">
-            <h4 id="dayTwoDate" class="card-title"></h4>
-            <div id="dayTwoIcon"></div>
-            <p id="dayTwoTemp"></p>
-            <p id="dayTwoHumidity"></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-2 p-1">
-        <div class="card">
-          <div class="card-body">
-            <h4 id="dayThreeDate" class="card-title"></h4>
-            <div id="dayThreeIcon"></div>
-            <p id="dayThreeTemp"></p>
-            <p id="dayThreeHumidity"></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-2 p-1">
-        <div class="card">
-          <div class="card-body">
-            <h4 id="dayFourDate" class="card-title"></h4>
-            <div id="dayFourIcon"></div>
-            <p id="dayFourTemp"></p>
-            <p id="dayFourHumidity"></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-2 p-1">
-        <div class="card">
-          <div class="card-body">
-            <h4 id="dayFiveDate" class="card-title"></h4>
-            <div id="dayFiveIcon"></div>
-            <p id="dayFiveTemp"></p>
-            <p id="dayFiveHumidity"></p>
-          </div>
-        </div>
-      </div>
-
-      
-    </div>
-  
-
-
-
-
-
-
-
-
-
+    
   </div>
 
 

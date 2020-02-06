@@ -4,6 +4,18 @@ let currentDay = moment().format("MM/DD/YYYY")
 
 
 document.getElementById('searchCity').addEventListener('click', event => {
+
+  let cityElem = document.createElement('div')
+  cityElem.className = 'button'
+  cityElem.innerHTML = `
+  <button type="button" class="btn  btn-lg btn-block btn-outline-dark text-left">${document.getElementById('city').value}</button>
+  `
+  document.getElementById('history').append(cityElem)
+
+})
+
+
+document.getElementById('searchCity').addEventListener('click', event => {
   event.preventDefault()
 
 fetch(`http://api.openweathermap.org/data/2.5/weather?q=${document.getElementById('city').value}&units=imperial&APPID=bad2b3e36cb846608fb20772133c3d58`)
@@ -27,7 +39,6 @@ fetch(`http://api.openweathermap.org/data/2.5/weather?q=${document.getElementByI
         document.getElementById('uvIndex').textContent = ('UV Index:  ' + value)
       })
   })
-
   fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${document.getElementById('city').value}&units=imperial&APPID=bad2b3e36cb846608fb20772133c3d58`)
       .then(r => r.json())
       .then(({list}) =>{
@@ -77,12 +88,11 @@ fetch(`http://api.openweathermap.org/data/2.5/weather?q=${document.getElementByI
         document.getElementById('dayFiveTemp').textContent = ('Temp:  ' + dayFiveTemp + " F")
         document.getElementById('dayFiveHumidity').textContent = ('Humidity:  ' + dayFiveHumidity + ' %')
 
-
-
+        document.getElementById('city').value = ''
       })
-
-
-
   .catch( e => console.error)
 
+  
+
 })
+
