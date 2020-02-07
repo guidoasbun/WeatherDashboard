@@ -1,31 +1,10 @@
 let currentDay = moment().format("MM/DD/YYYY")
-// let currentDayUnixSeconds = moment().unix(Number)
-// console.log(currentDayUnixSeconds)
 
+let city = ''
 
-// document.getElementById('searchCity').addEventListener('click', event => {
+let displayWeather = function(x) {
 
-//   let cityElem = document.createElement('div')
-//   cityElem.className = 'button'
-//   cityElem.innerHTML = `
-//   <button type="button" class="btn  btn-lg btn-block btn-outline-dark text-left">${document.getElementById('city').value}</button>
-//   `
-//   document.getElementById('history').append(cityElem)
-
-// })
-
-
-document.getElementById('searchCity').addEventListener('click', event => {
-  event.preventDefault()
-
-  let cityElem = document.createElement('div')
-  cityElem.innerHTML = `
-  <button type="button" id="cityBtn" class="btn  btn-lg btn-block btn-outline-dark text-left">${document.getElementById('city').value}</button>
-  `
-  document.getElementById('history').append(cityElem)
-
-
-fetch(`http://api.openweathermap.org/data/2.5/weather?q=${document.getElementById('city').value}&units=imperial&APPID=bad2b3e36cb846608fb20772133c3d58`)
+fetch(`http://api.openweathermap.org/data/2.5/weather?q=${x}&units=imperial&APPID=bad2b3e36cb846608fb20772133c3d58`)
   .then(r => r.json())
   .then(({ main, wind, name, weather, coord}) => {
 
@@ -54,7 +33,7 @@ fetch(`http://api.openweathermap.org/data/2.5/weather?q=${document.getElementByI
         document.getElementById('uvIndex').innerHTML = (`<p>UV Index: <span class="badge ${condition}">${value}</span></p>`)
       })
   })
-  fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${document.getElementById('city').value}&units=imperial&APPID=bad2b3e36cb846608fb20772133c3d58`)
+  fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${x}&units=imperial&APPID=bad2b3e36cb846608fb20772133c3d58`)
       .then(r => r.json())
       .then(({list}) =>{
 
@@ -107,5 +86,31 @@ fetch(`http://api.openweathermap.org/data/2.5/weather?q=${document.getElementByI
       })
   .catch( e => console.error)
 
+
+}
+
+document.getElementById('searchCity').addEventListener('click', event => {
+  event.preventDefault()
+
+  let cityElem = document.createElement('div')
+  cityElem.innerHTML = `
+  <div id="cityBtn" class="btn btn-lg btn-block btn-outline-dark text-left"><h2 id="cityList">${document.getElementById('city').value}</h2></div>
+  `
+  document.getElementById('history').append(cityElem)
+  city = document.getElementById('city').value
+  displayWeather(city)
+  
 })
+ 
+document.addEventListener('click', event => {
+  if (event.target.id.includes('cityBtn'))
+    city = document.getElementById('cityList').value  
+    console.log(city)
+    
+})
+
+
+
+
+
 
