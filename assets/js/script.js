@@ -18,6 +18,13 @@ let currentDay = moment().format("MM/DD/YYYY")
 document.getElementById('searchCity').addEventListener('click', event => {
   event.preventDefault()
 
+  let cityElem = document.createElement('div')
+  cityElem.innerHTML = `
+  <button type="button" id="cityBtn" class="btn  btn-lg btn-block btn-outline-dark text-left">${document.getElementById('city').value}</button>
+  `
+  document.getElementById('history').append(cityElem)
+
+
 fetch(`http://api.openweathermap.org/data/2.5/weather?q=${document.getElementById('city').value}&units=imperial&APPID=bad2b3e36cb846608fb20772133c3d58`)
   .then(r => r.json())
   .then(({ main, wind, name, weather, coord}) => {
@@ -99,8 +106,6 @@ fetch(`http://api.openweathermap.org/data/2.5/weather?q=${document.getElementByI
         document.getElementById('city').value = ''
       })
   .catch( e => console.error)
-
-  
 
 })
 
