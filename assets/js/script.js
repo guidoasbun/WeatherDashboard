@@ -14,7 +14,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${x}&units=imperial&APP
     let {speed:windSpeed} = wind
 
     document.getElementById('cityName').textContent = (name + '  ' + currentDay)
-    document.getElementById('currentIcon').innerHTML = (`<img src="http://openweathermap.org/img/wn/${icon}.png" alt="Weather Icon">`)
+    document.getElementById('currentIcon').innerHTML = (`<img src="https://openweathermap.org/img/wn/${icon}.png" alt="Weather Icon">`)
     document.getElementById('currentTemp').textContent = ('Temperature:  ' + temp + " F")
     document.getElementById('humidity').textContent = ('Humidity:  ' + humidity +'%')
     document.getElementById('windSpeed').textContent = ('Wind Speed:  ' + windSpeed +'mph')
