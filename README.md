@@ -1,9 +1,9 @@
 # Weather-Dashboard
 
-![Project Image](https://guidoasbun.s3.amazonaws.com/portfolio-image.png)
+![Project Image](https://guidoasbun.s3.amazonaws.com/weather-dashboard.png)
 
-> ![GitHub repo size](https://img.shields.io/github/repo-size/guidoasbun/portfolio) ![GitHub](https://img.shields.io/github/license/guidoasbun/portfolio)
- ![GitHub last commit](https://img.shields.io/github/last-commit/guidoasbun/Profile)
+> ![GitHub repo size](https://img.shields.io/github/repo-size/guidoasbun/WeatherDashboard) ![GitHub](https://img.shields.io/github/license/guidoasbun/WeatherDashboard)
+ ![GitHub last commit](https://img.shields.io/github/last-commit/guidoasbun/WeatherDashboard)
 ---
 
 ### Table of Contents
@@ -21,32 +21,31 @@
 
 ## Description
 
-A full stack web application to showcase my information and projects
+This is a weather application that displays the current and a five day forecast for a searched city.
 
 #### Technologies
 
-- Node JS
-- Express JS
-- Mongo DB
+- https://openweathermap.org/api
+- JavaScript
 - HTTP/CSS
-- AWS (Elastis BeanStalk, Code Build, EC2, Load Balancer, Route 53, S3 bucket)
+- AWS amplify (for deployment)
 
-[Back To The Top](#portfolio)
+[Back To The Top](#weather-dashboard)
 
 ---
 
 ## How To Use
 
- - Go to website https://www.guidoasbun.net
+ - Go to website https://master.d2o5gk0ja3q3pq.amplifyapp.com/
 
 #### Installation
 
 - Clone repo
 ```
-$ git clone https://github.com/guidoasbun/portfolio.git
+$ git clone https://github.com/guidoasbun/WeatherDashboard.git
 ```
 
-[Back To The Top](#portfolio)
+[Back To The Top](#weather-dashboard)
 
 ---
 
@@ -72,7 +71,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[Back To The Top](#portfolio)
+[Back To The Top](#weather-dashboard)
 
 ---
 
@@ -81,4 +80,4 @@ SOFTWARE.
 - LynkedIn - [Guido Asbun](https://www.linkedin.com/in/guidoasbun/)
 - Website - [Guido Asbun](https://www.guidoasbun.net)
 
-[Back To The Top](#portfolio)
+[Back To The Top](#weather-dashboard)
